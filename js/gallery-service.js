@@ -8,7 +8,7 @@ function getProjs() {
         name: "Mine Sweeper",
         title: "Better find those mines",
         desc: "Minesweeper is a single-player puzzle video game. The objective of the game is to clear a rectangular board containing hidden mines  or bombs without detonating any of them, with help from clues about the number of neighbouring mines in each field. The game originates from the 1960s, and it has been written for many computing platforms in use today. It has many variations and offshoots.",
-        url: "projs/sokoban",
+        url: "https://mayelgarat.github.io/Mine-Sweeper/",
         publishedAt: 'January 2017',
         labels: ["MineSweeper", "Booms"],
     }, {
@@ -24,7 +24,7 @@ function getProjs() {
         name: "Books Shop",
         title: "App for Buying Books",
         desc: "Poki has the best free online games selection and offers the most fun experience. On Poki you can play free online games at school or at home. Have fun! Free To Play. All The Games You Want. No Registration. Instant Gaming. Official Games. Trending Games. Viral Games",
-        url: "projs/sokoban",
+        url: "https://mayelgarat.github.io/Book-Shop/",
         publishedAt: 'December 2020',
         labels: ["Books", "Shop"],
     }, {
@@ -54,3 +54,12 @@ function getProjs() {
     }]
     return gProjs;
 }
+
+function getProject(projectId) {
+    var project = gProjs.find(project => {
+        return project.id === projectId;
+    })
+
+    return project;
+}
+
