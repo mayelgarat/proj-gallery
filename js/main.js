@@ -35,13 +35,20 @@ function renderModal(projectId) {
 
 
   var strHtmls = `<h2>${project.name}</h2>
-                  <p class="${project.title}"</p><img class="img-fluid d-block mx-auto" src="img/${project.id}.png" alt="">
+                  <p class="${project.title}"</p>
+                  <div class - "container">
+                  <img class="img-fluid d-block mx-auto fill" src="img/${project.id}.png" alt="">
+                  </div>
                   <p>${project.desc}</p>
                   <ul class="list-inline">
                      <li>Date: ${project.publishedAt}</li>
                      <li>Client: Coding Academy</li>
                      <li>Category:Game</li>
                  </ul>
+                 <button class="btn btn-primary" data-dismiss="modal" type="button" onclick="window.location.href= '${project.url}'">
+                
+                 Check It Out</button>
+ 
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                 <i class="fa fa-times"></i>
                 Close Project</button>`
@@ -59,9 +66,9 @@ function contact() {
 
     var str = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${extra}`
     window.open(str)
-    $('.email').val() = ""
-    $('.subject').val() = ""
-    $('.extra').val() = ""
+    $('.email').val("")
+    $('.subject').val("")
+    $('.extra').val("")
     $('.aside').removeClass('offcanvas-aside-open')
   })
 }
